@@ -1,21 +1,25 @@
-console.dir(document);
-var items = document.getElementsByClassName('list-gruop-items');
-items[0].textContent = 'Hello';
-items[2].style.backgroundColor = 'green';
-for(let i=0; i<items.length; i++){
-    items[i].style.fontWeight = 'bold';
-}
+// Traversing the DOM
+var = itemList = document.querySelector('#items');
+console.log(itemList.parentNode);
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor = 'yellow';
 
-var items1 = document.getElementsByTagName('li');
-items1[3].textContent = 'edited';
+console.log(itemList.firstElementChild);
+itemList.lastElementChild.innerHTML = 'hello';
 
-items[1].style.backgroundColor = 'green';
-items[2].style.visibility = "hidden";
+console.log(itemList.nextElementSibling);
 
- var li2 = documnet.querySelectorAll('li:nth-child(2)');
- li2.style.fontColor = 'green';
+// create a div
+var newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.id = 'bye';
 
- var odd = documnet.querySelectorAll('li: nth-child(odd)');
- for(var i =0; i< odd.length; i++){
-    odd[i].style.backgroundColor = 'green';
- }
+newDiv.setAttribute('title','hello div');
+var divText = document.createTextNode('heelo my frnds');
+
+newDiv.appendChild(divText);
+var conatiner = document.querySelector('header .contanier');
+var h1 = document.querySelector('header h1');
+console.log(newDiv);
+ conatiner.insertBefore(newDiv,h1);
